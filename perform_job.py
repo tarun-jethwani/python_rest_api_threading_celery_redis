@@ -10,7 +10,7 @@ def create_connection():
 
 def read_csv():
     print("starting to read from csv file")
-    df = pd.read_csv("./input_data/urban-area-long-term.csv", delimiter=',')
+    df = pd.read_csv("./input_data/urban-area-long-term new.csv", delimiter=',')
     df = pd.concat([df] * 3)
     return df
 
@@ -69,3 +69,4 @@ def read_n_write_data_to_db(data_vol):
 if __name__ == "__main__":
     read_n_write_data_to_db(10)
     # read_records_from_db()
+    # read_csv()

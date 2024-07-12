@@ -1,0 +1,1 @@
+celery -A tasks worker --pool=threads --concurrency=2 --loglevel=DEBUG

@@ -62,7 +62,8 @@ def worker(task):
 def fetch_and_process_tasks():
     with ThreadPoolExecutor(max_workers=4) as executor:
         while True:
-            task = fetch_task()
+            #task = fetch_task()
+            task = current_app.tasks['tasks.send_task_in_queue']
             if task:
                 executor.submit(worker, task)
 
